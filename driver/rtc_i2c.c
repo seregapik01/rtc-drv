@@ -131,10 +131,9 @@ static int rtc_i2c_probe(struct i2c_client *client, const struct i2c_device_id *
 }
 
 // Удаление драйвера
-static int rtc_i2c_remove(struct i2c_client *client)
+static void rtc_i2c_remove(struct i2c_client *client)
 {
     dev_info(&client->dev, "HT74563A RTC removed\n");
-    return 0;
 }
 
 // Таблица совместимости
